@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://wsexample.twh.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getName>
+            <userId>1</userId>
+        </gs:getName>
+    </soapenv:Body>
+</soapenv:Envelope>
