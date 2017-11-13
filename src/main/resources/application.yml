@@ -1,3 +1,41 @@
 server:
   port: 8765
 
+# spring
+spring:
+  datasource:
+    druid:
+      url: 'jdbc:mysql://172.20.10.66:3306/51jk_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&allowMultiQueries=true'
+      username: 'devsql'
+      password: '1qaz123.com'
+      driver-class-name: 'com.mysql.jdbc.Driver'
+      initialSize: 1
+      minIdle: 5
+      maxActive: 10
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      useGlobalDataSourceStat: true
+      filter:
+        stat:
+          enabled: true
+          dbType: mysql
+          logSlowSql: true
+          slowSqlMillis: 1000
+        wall:
+          enabled: true
+        slf4j:
+          enabled: true
+mybatis:
+  mapperLocations: classpath:mappers/**/*.xml
+  configuration:
+    callSettersOnNulls: true
+logging:
+  config: classpath:logback-spring.xml
