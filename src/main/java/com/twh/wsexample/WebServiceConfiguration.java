@@ -18,7 +18,8 @@ public class WebServiceConfiguration extends WsConfigurerAdapter {
     @Bean
     public ServletRegistrationBean dispatcherServlet() {
         CXFServlet cxfServlet = new CXFServlet();
-        return new ServletRegistrationBean(cxfServlet, "/test/*");
+
+        return new ServletRegistrationBean(cxfServlet, "/ws/*");
     }
 
     @Bean(name = Bus.DEFAULT_BUS_ID)
@@ -33,6 +34,7 @@ public class WebServiceConfiguration extends WsConfigurerAdapter {
     @Bean
     public Endpoint endpoint() {
         EndpointImpl endpoint = new EndpointImpl(springBus(), userService());
+//        endpoint.setPublishedEndpointUrl("http://busm-test.51jk.com/ws/user");
         endpoint.publish("/user");
         return endpoint;
     }

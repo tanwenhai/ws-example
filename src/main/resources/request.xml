@@ -1,9 +1,83 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:gs="http://wsexample.twh.com/">
-    <soapenv:Header/>
-    <soapenv:Body>
-        <gs:getName>
-            <userId>1</userId>
-        </gs:getName>
-    </soapenv:Body>
-</soapenv:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<businessdata checkdate="2012-04-24 11:11:11">
+    <functioncode>1001</functioncode>
+    <cardNo>3001060003</cardNo>
+    <sbp>120</sbp>
+    <dbp>80</dbp>
+    <pulse>65</pulse>
+    <icpcode>442000</icpcode>
+    <bo>99</bo>
+    <glu>6.9</glu>
+    <hoursAfterMeal>0</hoursAfterMeal>
+    <fat>23.4</fat>
+    <bmr>1654</bmr>
+    <water>63.6</water>
+    <height>176.5</height>
+    <weight>65.2</weight>
+    <bmi>20.4</bmi>
+    <fetalheart>85</fetalheart>
+    <ecg> 255044462D312E360A25E4E3CFD20A312030206F…. </ecg>
+    <ecgxml> 255044462D312E360A25E4E3CFD20A312030206F….</ecgxml>
+    <ecgpng> 255044462D312E360A25E4E3CFD20A312030206F….</ecgpng>
+    <survey1>1</survey1>
+    <survey2>1</survey2>
+    <survey3>2</survey3>
+    <survey4>1</survey4>
+    <survey5>3</survey5>
+    <survey6>1</survey6>
+    <survey7>2</survey7>
+    <survey8>2</survey8>
+    <survey9>2</survey9>
+    <survey10>1</survey10>
+    <survey11>3</survey11>
+    <survey12>1</survey12>
+    <survey13>3</survey13>
+    <survey14>2/3/4/5/6</survey14>" +
+    <fullname>安鹏</fullname>
+    <gender>男</gender>
+    <nation>汉</nation>
+    <birthday>1986-04-07</birthday>
+    <addr>深圳市XXX</addr>
+    <icpcode>442000</icpcode>
+    <expire>2015-09-01</expire>
+    <photo><![CDATA[ 编码后的图片数据 ]]></photo>
+    <phone>1234567890</phone>
+    <icpcode>422000</icpcode>
+    <fullname>安鹏</fullname>
+    <gender>男</gender>
+    <nation>汉</nation>
+    <birthday>1986-04-07</birthday>
+    <expire>2015-09-01</expire>
+    <CHOL>4.6</CHOL>
+    <UA>200</UA>
+    <waistline>100</waistline>
+    <hipline>10</hipline>
+    <whr>10</whr>
+    <FGCParam>正常</FGCParam>
+    <FGCData>122233456674555...</FGCData>
+    <URO>+1</URO>
+    <BLD>-</BLD>
+    <BIL>+-</BIL>
+    <KET>+1</KET>
+    <GLU>+3</GLU>
+    <PRO>+-</PRO>
+    <PH>6.5</PH>
+    <NIT>+</NIT>
+    <LEU>+-</LEU>
+    <VC>+</VC>
+    <SG>1.025</SG>
+    <CHOL1>3.56</CHOL1>
+    <HDL>3.26</HDL>
+    <LDL>3.25</LDL>
+    <TG>4.23</TG>
+    <CMP>中性体质</CMP>
+    <TT>36.5</TT>
+    <VisionLeft>2.0(5.3)</VisionLeft>
+    <VisionRight>2.0(5.3)</VisionRight>
+    <PEF>100</PEF>
+    <FEV1>3.55</FEV1>
+    <FVC>4.56</FVC>
+    <bd_xml>HDHDHDHDYHDBWU...</bd_xml>
+    <bd_png>HDHDHDHDYHDBWU...</bd_png>
+    <NGSP>5.3</NGSP>
+</businessdata>

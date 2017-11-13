@@ -7,7 +7,5 @@ import javax.jws.WebService;
 @WebService
 public interface UserService {
     @WebMethod
-    String getName(@WebParam(name = "userId") Long userId);
-    @WebMethod
-    User getUser(Long userId);
+    String funMain(String xml);
 }
