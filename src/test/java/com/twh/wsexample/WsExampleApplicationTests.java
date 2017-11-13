@@ -11,6 +11,7 @@ public class WsExampleApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

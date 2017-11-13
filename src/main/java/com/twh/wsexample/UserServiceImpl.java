@@ -1,41 +1,34 @@
 package com.twh.wsexample;
 
-import com.twh.stub.CommonResponse;
-import com.twh.stub.CommonResponseObjectFactory;
+import com.twh.xml.CommonRequestConvert;
+import com.twh.xml.CommonResponseConvert;
+import com.twh.xml.stub.CommonRequest;
+import com.twh.xml.stub.CommonResponse;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import java.io.StringWriter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Objects;
 
+/**
+ * @author
+ */
 public class UserServiceImpl implements UserService {
-    private Map<Long, User> userMap = new HashMap<>();
-    public UserServiceImpl() {
-        User user = new User();
-        user.setUserId(10001L);
-        user.setUsername("username1");
-        user.setEmail("email1");
-        user.setGmtCreate(new Date());
-        userMap.put(user.getUserId(), user);
-        user = new User();
-        user.setUserId(10002L);
-        user.setUsername("username2");
-        user.setEmail("email2");
-        user.setGmtCreate(new Date());
-        userMap.put(user.getUserId(), user);
-        user = new User();
-        user.setUserId(10003L);
-        user.setUsername("username3");
-        user.setEmail("email3");
-        user.setGmtCreate(new Date());
-        userMap.put(user.getUserId(), user);
+    private static final CommonResponse PARSE_XML_FAIL;
+    static {
+        PARSE_XML_FAIL = new CommonResponse();
+        PARSE_XML_FAIL.setErrCode(0);
+        PARSE_XML_FAIL.setErrMsg("参数解析失败");
     }
 
     @Override
     public String funMain(String xml) {
+        CommonRequest commonRequest = new CommonRequestConvert().convert(xml);
+        if (Objects.isNull(commonRequest)) {
+            return new CommonResponseConvert().reverse(PARSE_XML_FAIL);
+        }
+
+        if (commonRequest.getFunctioncode() == 1001) {
+
+        }
+
         return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<businessdata>\n" +
                 "<errCode>0</errCode>\n" +

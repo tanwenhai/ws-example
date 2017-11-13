@@ -6,7 +6,7 @@
 //
 
 
-package com.twh.stub;
+package com.twh.xml.stub;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
